@@ -1,0 +1,87 @@
+### DFU Bootloader for 32U2 ###
+#
+#  Plug the AVRISP-mk2 into the 32u2 ICSP pins (pin 1 is top right, as indicated)
+#
+
+avrdude -patmega32u2 -Pusb -cavrisp2 -Uflash:w:BootloaderDFU.hex:a -Ulfuse:w:0xdf:m -Uhfuse:w:0xd9:m -Uefuse:w:0xf0:m -Ulock:w:0xcf:m
+
+#
+#  Outcome: alternating Tx/Rx LED
+#
+
+### U2duino (USBSerial + RTS/DTS) ###
+#
+
+avrdude -patmega32u2 -Pusb -cavrisp2 -Uflash:w:U2duino.hex:a -D -Ulock:w:0xcf:m
+
+#
+#  Outcome: Check USB cdc_acm enumeration. Tx/Rx LED flicker and extinguish on enumeration.
+#
+
+
+
+### stk500v2 Bootloader for 1284P at 20MHz ###
+#
+#  Plug the AVRISP-mk2 into the 1284p ICSP pins (pin 1 is top left, as indicated)
+#
+
+avrdude -pm1284p -Pusb -cavrisp2 -u -Uflash:w:stk500boot_v2_goldilocks.hex:a -Ulfuse:w:0xd7:m -Uhfuse:w:0xd8:m -Uefuse:w:0xfc:m -Ulock:w:0xcf:m
+
+#
+#Outcome: D13 LED 3 blink cycles.
+#         "!!!" entered on 38400 baud serial terminal enters "Bootloader>" prompt.
+#
+
+#
+#
+#    OR
+#
+#   
+
+### stk500v2 Bootloader for 1284P at 22.1184MHz ###
+#
+#  Plug the AVRISP-mk2 into the 1284p ICSP pins (pin 1 is top left, as indicated)
+#
+
+avrdude	-pm1284p -Pusb -cavrisp2 -u -Uflash:w:stk500boot_v2_goldilocks_22.hex:a -Ulfuse:w:0xd7:m -Uhfuse:w:0xd8:m -Uefuse:w:0xfc:m -Ulock:w:0xcf:m 
+
+#
+#Outcome: D13 LED 3 blink cycles.
+#         "!!!" entered on 38400 baud serial terminal enters "Bootloader>" prompt.
+#
+
+
+#
+#
+#    OR
+#
+#   
+
+### stk500v2 Bootloader for 1284P at 24.576MHz ###
+#
+#  Plug the AVRISP-mk2 into the 1284p ICSP pins (pin 1 is top left, as indicated)
+#
+
+avrdude	-pm1284p -Pusb -cavrisp2 -u -Uflash:w:stk500boot_v2_goldilocks_analogue.hex:a -Ulfuse:w:0xd7:m -Uhfuse:w:0xd8:m -Uefuse:w:0xfc:m -Ulock:w:0xcf:m
+
+#
+#  Plug the Atmel-ICE into the 1284p ICSP pins (pin 1 is top left, as indicated)
+#
+
+avrdude	-pm1284p -Pusb -catmelice_isp -u -Uflash:w:stk500boot_v2_goldilocks_analogue.hex:a -Ulfuse:w:0xd7:m -Uhfuse:w:0xd8:m -Uefuse:w:0xfc:m -Ulock:w:0xcf:m
+
+#
+#Outcome: D13 LED 3 blink cycles.
+#         "!!!" entered on 38400 baud serial terminal enters "Bootloader>" prompt.
+#
+
+
+### Goldilocks Analogue test suite ###
+#
+# Program with the serial wiring (stk500 V2) protocol
+
+avrdude -pm1284p -cwiring -P/dev/ttyUSB0 -b38400 -D -Uflash:w:GA_TestSuite.hex:a
+
+
+
+
