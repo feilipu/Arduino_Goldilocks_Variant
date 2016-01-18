@@ -19,8 +19,8 @@ goldilocks_20MHz.bootloader.tool=arduino:avrdude
 goldilocks_20MHz.bootloader.low_fuses=0xd7
 goldilocks_20MHz.bootloader.high_fuses=0xd8
 goldilocks_20MHz.bootloader.extended_fuses=0xfc
-goldilocks_20MHz.bootloader.unlock_bits=0x3F
-goldilocks_20MHz.bootloader.lock_bits=0x0F
+goldilocks_20MHz.bootloader.unlock_bits=0xFF
+goldilocks_20MHz.bootloader.lock_bits=0xCF
 goldilocks_20MHz.bootloader.file=goldilocks_stk500v2/stk500boot_v2_goldilocks.hex
 
 goldilocks_20MHz.build.core=arduino:arduino
@@ -46,8 +46,8 @@ goldilocks_22MHz.bootloader.tool=arduino:avrdude
 goldilocks_22MHz.bootloader.low_fuses=0xd7
 goldilocks_22MHz.bootloader.high_fuses=0xd8
 goldilocks_22MHz.bootloader.extended_fuses=0xfc
-goldilocks_22MHz.bootloader.unlock_bits=0x3F
-goldilocks_22MHz.bootloader.lock_bits=0x0F
+goldilocks_22MHz.bootloader.unlock_bits=0xFF
+goldilocks_22MHz.bootloader.lock_bits=0xCF
 goldilocks_22MHz.bootloader.file=goldilocks_stk500v2/stk500boot_v2_goldilocks_22.hex
 
 goldilocks_22MHz.build.core=arduino:arduino
@@ -73,8 +73,8 @@ goldilocks_analogue.bootloader.tool=arduino:avrdude
 goldilocks_analogue.bootloader.low_fuses=0xd7
 goldilocks_analogue.bootloader.high_fuses=0xd8
 goldilocks_analogue.bootloader.extended_fuses=0xfc
-goldilocks_analogue.bootloader.unlock_bits=0x3F
-goldilocks_analogue.bootloader.lock_bits=0x0F
+goldilocks_analogue.bootloader.unlock_bits=0xFF
+goldilocks_analogue.bootloader.lock_bits=0xCF
 goldilocks_analogue.bootloader.file=goldilocks_stk500v2/stk500boot_v2_goldilocks_analogue.hex
 
 goldilocks_analogue.build.core=arduino:arduino
