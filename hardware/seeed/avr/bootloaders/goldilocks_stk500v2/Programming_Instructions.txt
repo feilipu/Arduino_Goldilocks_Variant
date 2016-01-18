@@ -18,6 +18,11 @@ avrdude -patmega32u2 -Pusb -cavrisp2 -Uflash:w:U2duino.hex:a -D -Ulock:w:0xcf:m
 #  Outcome: Check USB cdc_acm enumeration. Tx/Rx LED flicker and extinguish on enumeration.
 #
 
+#
+#
+###  THEN  ###
+#
+#
 
 
 ### stk500v2 Bootloader for 1284P at 20MHz ###
@@ -28,13 +33,13 @@ avrdude -patmega32u2 -Pusb -cavrisp2 -Uflash:w:U2duino.hex:a -D -Ulock:w:0xcf:m
 avrdude -pm1284p -Pusb -cavrisp2 -u -Uflash:w:stk500boot_v2_goldilocks.hex:a -Ulfuse:w:0xd7:m -Uhfuse:w:0xd8:m -Uefuse:w:0xfc:m -Ulock:w:0xcf:m
 
 #
-#Outcome: D13 LED 3 blink cycles.
-#         "!!!" entered on 38400 baud serial terminal enters "Bootloader>" prompt.
+#  Outcome: D13 LED 3 blink cycles.
+#         "!!!" entered on 38400 baud 8n1 serial terminal enters "Bootloader>" prompt.
 #
 
 #
 #
-#    OR
+###  OR  ###
 #
 #   
 
@@ -47,13 +52,13 @@ avrdude	-pm1284p -Pusb -cavrisp2 -u -Uflash:w:stk500boot_v2_goldilocks_22.hex:a 
 
 #
 #Outcome: D13 LED 3 blink cycles.
-#         "!!!" entered on 38400 baud serial terminal enters "Bootloader>" prompt.
+#         "!!!" entered on 38400 baud 8n1 serial terminal enters "Bootloader>" prompt.
 #
 
 
 #
 #
-#    OR
+###  OR  ###
 #
 #   
 
@@ -71,14 +76,20 @@ avrdude	-pm1284p -Pusb -cavrisp2 -u -Uflash:w:stk500boot_v2_goldilocks_analogue.
 avrdude	-pm1284p -Pusb -catmelice_isp -u -Uflash:w:stk500boot_v2_goldilocks_analogue.hex:a -Ulfuse:w:0xd7:m -Uhfuse:w:0xd8:m -Uefuse:w:0xfc:m -Ulock:w:0xcf:m
 
 #
-#Outcome: D13 LED 3 blink cycles.
-#         "!!!" entered on 38400 baud serial terminal enters "Bootloader>" prompt.
+#  Outcome: D13 LED 3 blink cycles.
+#         "!!!" entered on 38400 baud 8n1 serial terminal enters "Bootloader>" prompt.
 #
 
+#
+#
+###  THEN  ###
+#
+#
 
 ### Goldilocks Analogue test suite ###
 #
-# Program with the serial wiring (stk500 V2) protocol
+#  Program with the serial wiring (stk500 V2) protocol
+#
 
 avrdude -pm1284p -cwiring -P/dev/ttyUSB0 -b38400 -D -Uflash:w:GA_TestSuite.hex:a
 
