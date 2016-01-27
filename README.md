@@ -37,7 +37,7 @@ Pin assignments below.
 Use the Arduino "wiring" protocol to upload files.
 
 STK500v2 boot-loader including debug monitor to analyse interrupt, I/O, RAM, FLASH contents.
-Enter !!! into Arduino IDE Serial Monitor (38400 8n1) before boot-loader times out to enter the debug monitor.
+Enter !!! <CR> into Arduino IDE Serial Monitor (38400 8n1) before boot-loader times out to enter the debug monitor.
 
 ```
 0=Zero addr (reset Dump Addresses)
@@ -52,4 +52,23 @@ Q=Quit
 R=Dump RAM 
 V=show interrupt Vectors 
 Y=Port blink
+```
+
+# Licence
+```
+Copyright (c) 2016 Phillip Stevens.  All right reserved.
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2.1 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+See the GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 ```
