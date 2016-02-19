@@ -25,7 +25,7 @@ avrdude -patmega32u2 -Pusb -cavrisp2 -Uflash:w:U2duino.hex:a -D -Ulock:w:0xcf:m
 #  Plug the AVRISP-mk2 into the 1284p ICSP pins (pin 1 is top left, as indicated)
 #
 
-avrdude -pm1284p -Pusb -cavrisp2 -u -Uflash:w:stk500boot_v2_goldilocks.hex:a -Ulfuse:w:0xd7:m -Uhfuse:w:0xd8:m -Uefuse:w:0xfc:m -Ulock:w:0xcf:m
+avrdude -pm1284p -Pusb -cavrisp2 -u -Uflash:w:stk500boot_v2_goldilocks.hex:a -Ulfuse:w:0xd7:m -Uhfuse:w:0xd8:m -Uefuse:w:0xfc:m -Ulock:w:0x0f:m
 
 #
 #Outcome: D13 LED 3 blink cycles.
@@ -43,7 +43,7 @@ avrdude -pm1284p -Pusb -cavrisp2 -u -Uflash:w:stk500boot_v2_goldilocks.hex:a -Ul
 #  Plug the AVRISP-mk2 into the 1284p ICSP pins (pin 1 is top left, as indicated)
 #
 
-avrdude	-pm1284p -Pusb -cavrisp2 -u -Uflash:w:stk500boot_v2_goldilocks_22.hex:a -Ulfuse:w:0xd7:m -Uhfuse:w:0xd8:m -Uefuse:w:0xfc:m -Ulock:w:0xcf:m 
+avrdude	-pm1284p -Pusb -cavrisp2 -u -Uflash:w:stk500boot_v2_goldilocks_22.hex:a -Ulfuse:w:0xd7:m -Uhfuse:w:0xd8:m -Uefuse:w:0xfc:m -Ulock:w:0x0f:m 
 
 #
 #Outcome: D13 LED 3 blink cycles.
@@ -62,13 +62,13 @@ avrdude	-pm1284p -Pusb -cavrisp2 -u -Uflash:w:stk500boot_v2_goldilocks_22.hex:a 
 #  Plug the AVRISP-mk2 into the 1284p ICSP pins (pin 1 is top left, as indicated)
 #
 
-avrdude	-pm1284p -Pusb -cavrisp2 -u -Uflash:w:stk500boot_v2_goldilocks_analogue.hex:a -Ulfuse:w:0xd7:m -Uhfuse:w:0xd8:m -Uefuse:w:0xfc:m -Ulock:w:0xcf:m
+avrdude	-pm1284p -Pusb -cavrisp2 -u -Uflash:w:stk500boot_v2_goldilocks_analogue.hex:a -Ulfuse:w:0xd7:m -Uhfuse:w:0xd8:m -Uefuse:w:0xfc:m -Ulock:w:0x0f:m
 
 #
 #  Plug the Atmel-ICE into the 1284p ICSP pins (pin 1 is top left, as indicated)
 #
 
-avrdude	-pm1284p -Pusb -catmelice_isp -u -Uflash:w:stk500boot_v2_goldilocks_analogue.hex:a -Ulfuse:w:0xd7:m -Uhfuse:w:0xd8:m -Uefuse:w:0xfc:m -Ulock:w:0xcf:m
+avrdude	-pm1284p -Pusb -catmelice_isp -u -Uflash:w:stk500boot_v2_goldilocks_analogue.hex:a -Ulfuse:w:0xd7:m -Uhfuse:w:0xd8:m -Uefuse:w:0xfc:m -Ulock:w:0x0f:m
 
 #
 #Outcome: D13 LED 3 blink cycles.
