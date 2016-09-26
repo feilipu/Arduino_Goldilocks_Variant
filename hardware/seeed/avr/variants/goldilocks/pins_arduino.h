@@ -51,29 +51,49 @@
 
 #define NUM_DIGITAL_PINS	(32)
 #define NUM_ANALOG_INPUTS	(8)
+#define analogInputToDigitalPin(p)  ((p < 8) ? (p) + 24 : -1)
 
+#define PIN_SPI_SS    (10)
+#define PIN_SPI_MOSI  (11)
+#define PIN_SPI_MISO  (12)
+#define PIN_SPI_SCK   (13)
 
-static const uint8_t SS   = 10;
-static const uint8_t MOSI = 11;
-static const uint8_t MISO = 12;
-static const uint8_t SCK  = 13;
+static const uint8_t SS   = PIN_SPI_SS;
+static const uint8_t MOSI = PIN_SPI_MOSI;
+static const uint8_t MISO = PIN_SPI_MISO;
+static const uint8_t SCK  = PIN_SPI_SCK;
 
-static const uint8_t SDA = 17;
-static const uint8_t SCL = 16;
+#define PIN_WIRE_SDA  (17)
+#define PIN_WIRE_SCL  (16)
 
-static const uint8_t LED = 13;
+static const uint8_t SDA = PIN_WIRE_SDA;
+static const uint8_t SCL = PIN_WIRE_SCL;
 
-static const uint8_t A0 = 24;
-static const uint8_t A1 = 25;
-static const uint8_t A2 = 26;
-static const uint8_t A3 = 27;
-static const uint8_t A4 = 28;
-static const uint8_t A5 = 29;
-static const uint8_t A6 = 30;
-static const uint8_t A7 = 31;
+#define LED_BUILTIN  (13)
 
-static const uint8_t LINE = 30;
-static const uint8_t MIC = 31;
+#define PIN_A0   (24)
+#define PIN_A1   (25)
+#define PIN_A2   (26)
+#define PIN_A3   (27)
+#define PIN_A4   (28)
+#define PIN_A5   (29)
+#define PIN_A6   (30)
+#define PIN_A7   (31)
+
+static const uint8_t A0 = PIN_A0;
+static const uint8_t A1 = PIN_A1;
+static const uint8_t A2 = PIN_A2;
+static const uint8_t A3 = PIN_A3;
+static const uint8_t A4 = PIN_A4;
+static const uint8_t A5 = PIN_A5;
+static const uint8_t A6 = PIN_A6;
+static const uint8_t A7 = PIN_A7;
+
+#define PIN_LINE  (30)
+#define PIN_MIC   (31)
+
+static const uint8_t LINE = PIN_LINE;
+static const uint8_t MIC = PIN_MIC;
 
 #define analogInputToDigitalPin(p) ( ((p) < NUM_ANALOG_INPUTS) ? ((p) + 24) : -1)
 
