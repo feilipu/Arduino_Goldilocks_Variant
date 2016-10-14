@@ -1,0 +1,9 @@
+
+# Goldilocks AVR Core and platform.
+# ------------------------------
+#
+# For more info:
+# https://github.com/arduino/Arduino/wiki/Arduino-IDE-1.5-3rd-party-Hardware-specification
+
+name=Goldilocks AVR Boards
+version=1.1.0

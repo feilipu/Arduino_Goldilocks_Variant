@@ -18,7 +18,36 @@ avrdude -patmega32u2 -Pusb -cavrisp2 -Uflash:w:U2duino.hex:a -D -Ulock:w:0xcf:m
 #  Outcome: Check USB cdc_acm enumeration. Tx/Rx LED flicker and extinguish on enumeration.
 #
 
+#
+#
+#    OR
+#
+# 
 
+#
+#  Plug the Atmel-ICE into the 32u2 ICSP pins (pin 1 is top right, as indicated)
+#
+
+avrdude -patmega32u2 -Pusb -catmelice_isp -Uflash:w:BootloaderDFU.hex:a -Ulfuse:w:0xdf:m -Uhfuse:w:0xd9:m -Uefuse:w:0xf0:m -Ulock:w:0xcf:m
+
+#
+#  Outcome: alternating Tx/Rx LED
+#
+
+### U2duino (USBSerial + RTS/DTS) ###
+#
+
+avrdude -patmega32u2 -Pusb -catmelice_isp -Uflash:w:U2duino.hex:a -D -Ulock:w:0xcf:m
+
+#
+#  Outcome: Check USB cdc_acm enumeration. Tx/Rx LED flicker and extinguish on enumeration.
+#
+
+#
+#
+#    THEN
+#
+# 
 
 ### stk500v2 Bootloader for 1284P at 20MHz ###
 #

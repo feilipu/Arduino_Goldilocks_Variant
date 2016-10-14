@@ -1,0 +1,6 @@
+atmelice_isp.name=Atmel ICE ISP Mode
+atmelice_isp.communication=usb
+atmelice_isp.protocol=atmelice_isp
+atmelice_isp.program.protocol=stk500v2
+atmelice_isp.program.tool=avrdude
+atmelice_isp.program.extra_params=-Pusb
