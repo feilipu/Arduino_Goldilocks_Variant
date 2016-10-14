@@ -51,7 +51,6 @@
 
 #define NUM_DIGITAL_PINS	(32)
 #define NUM_ANALOG_INPUTS	(8)
-#define analogInputToDigitalPin(p)  ((p < 8) ? (p) + 24 : -1)
 
 #define PIN_SPI_SS    (10)
 #define PIN_SPI_MOSI  (11)
