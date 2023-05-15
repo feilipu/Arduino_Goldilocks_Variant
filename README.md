@@ -1,6 +1,6 @@
 # Arduino_Goldilocks_Variant
 
-Variant files for Goldilocks AVR ATmega1284p Boards under Arduino IDE 1.6.x.
+Variant files for Goldilocks AVR ATmega1284p Boards under Arduino IDE 1.6.x and later.
 These files suppport the Goldilocks Analogue and the 2013 Goldilocks v1.1.
 
 The URL for adding Goldilocks to the Arduino IDE Boards Manager is maintained
